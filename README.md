@@ -20,7 +20,7 @@ Este aplicativo permite aos usuários adicionar, visualizar e excluir tarefas. E
 ## Como Usar
 
 1. Após a instalação, execute o comando `npm start` para iniciar o servidor de desenvolvimento.
-2. Abra seu navegador e visite `http://localhost:3000` para visualizar o aplicativo.
+2. Abra seu navegador e visite `http://localhost:3000` (ou outro caminho fornecido via terminal) para visualizar o aplicativo.
 
 ## Funcionalidades
 
