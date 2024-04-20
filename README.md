@@ -32,6 +32,3 @@ Este aplicativo permite aos usuários adicionar, visualizar e excluir tarefas. E
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar uma solicitação de pull request.
 
-## Contato
-
-Para mais informações, entre em contato pelo e-mail: alisson.camargo020@gmail.com
