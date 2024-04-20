@@ -1,5 +1,6 @@
+/* The code you provided is creating a styled button component using
+styled-components library in React. */
 import styled from "styled-components"
-
 const BotaoEstilizado = styled.button`
     width: 40%;
     border:none;
@@ -10,6 +11,7 @@ const BotaoEstilizado = styled.button`
     background-color: #181A1B;
     color: #92f1b8;
 `
+// a arrow-function está retornado o jsx "botao" presente em formulario 
 
 const Botao = ( {textBotao} ) => {
     return (

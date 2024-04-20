@@ -1,10 +1,7 @@
 import styled from 'styled-components'
-
-
 const ImagemEstilizada = styled.img`
     width: 100%;
 `
-
 const SectionEstilizada = styled.section`
     width: 100%;
     margin: 10px 0 0 0;
@@ -12,7 +9,6 @@ const SectionEstilizada = styled.section`
     padding: 0;
     max-width: 100%;
 `
-
 const TituloEstilizado = styled.h2`
     font-size: 2rem;
     word-wrap: break-word;
@@ -22,14 +18,12 @@ const TituloEstilizado = styled.h2`
     margin: 0;
     padding: 0;
 `
-
 const DivEstilizada = styled.div`
     position: absolute;
     padding: 0;
     margin: 0;
     top: 50px;
 `
-
 const BannerPrincipal = ({ tituloDoBanner}) => {
     return (
         <SectionEstilizada>

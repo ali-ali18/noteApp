@@ -1,3 +1,6 @@
+/* Este trecho de código está criando um componente de estilo global usando componentes com estilo
+em um aplicativo React. A função 'createGlobalStyle' de styled-components
+é usado para definir estilos globais que serão aplicados a todo o aplicativo. */
 import { createGlobalStyle } from "styled-components";
 
 const EstilosGlobais = createGlobalStyle`

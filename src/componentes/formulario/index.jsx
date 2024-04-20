@@ -2,7 +2,8 @@ import styled from "styled-components"
 import CampoTexto from "./campoTexto"
 import Botao from "./botao"
 import { useState } from "react"
-
+/* The code snippet you provided is using styled-components library in React to
+create a styled form component called `FormularioEstilizado`. */
 const FormularioEstilizado = styled.form`
     display: flex;
     flex-direction: column;
@@ -13,11 +14,11 @@ const FormularioEstilizado = styled.form`
     border-radius: 10px;
     gap: 18px;
 `
-
-
-
 const Formulario = ( {tarefaCadastrada} ) => {
-
+/* O trecho de código fornecido é um componente funcional do React chamado 'Formulario'
+que define três variáveis de estado usando o gancho 'useState': 'titulo',
+'descrição' e 'opcional'. Essas variáveis de estado são usadas para armazenar os valores
+de campos de entrada em um formulário. */
     const [titulo, setTitulo] = useState("")
     const [descricao, setDescricao] = useState("")
     const [opcional, setOpcional] = useState("")
@@ -34,6 +35,8 @@ const Formulario = ( {tarefaCadastrada} ) => {
         setOpcional("")
     }
 
+/* A instrução 'return' no componente 'Formulario' está renderizando elementos JSX
+que compõem uma forma. */
     return (
         <FormularioEstilizado onSubmit={aoSalvar}>
             <CampoTexto
