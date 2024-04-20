@@ -21,11 +21,16 @@ const DivEstilizada = styled.div`
 `
 
 
-const CampoTexto = ({nome, label, type="text", placeholder, obrigatorio }) => {
+const CampoTexto = ({nome, label, type="text", placeholder, obrigatorio, valor,aoReceber }) => {
+
+    const aoValorDigitado = (e) => {
+        aoReceber(e.target.value)
+    } 
+
     return (
         <DivEstilizada>
             <LabelEstilizado htmlFor={nome}>{label}</LabelEstilizado>
-            <InputEstilizado type={type} placeholder={placeholder} name={nome} required={obrigatorio}/>
+            <InputEstilizado type={type} placeholder={placeholder} name={nome} required={obrigatorio} onChange={aoValorDigitado} value={valor}/>
         </DivEstilizada>
     )
 }

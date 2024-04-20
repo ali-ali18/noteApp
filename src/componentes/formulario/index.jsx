@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import CampoTexto from "./campoTexto"
 import Botao from "./botao"
+import { useState } from "react"
 
 const FormularioEstilizado = styled.form`
     display: flex;
@@ -13,15 +14,36 @@ const FormularioEstilizado = styled.form`
     gap: 18px;
 `
 
-const Formulario = () => {
+
+
+const Formulario = ( {tarefaCadastrada} ) => {
+
+    const [titulo, setTitulo] = useState("")
+    const [descricao, setDescricao] = useState("")
+    const [opcional, setOpcional] = useState("")
+
+    const aoSalvar = (e) => {
+        e.preventDefault();
+        tarefaCadastrada({
+            titulo,
+            descricao,
+            opcional
+        })
+        setTitulo("")
+        setDescricao("")
+        setOpcional("")
+    }
+
     return (
-        <FormularioEstilizado>
+        <FormularioEstilizado onSubmit={aoSalvar}>
             <CampoTexto
                 label="Tarefa"
                 nome="Tarefa"
                 placeholder="De um nome a sua tarefa..."
                 type="text"
                 obrigatorio
+                valor={titulo}
+                aoReceber={valor => setTitulo(valor)}
             />
             <CampoTexto
                 label="Descreva sua tarefa"
@@ -29,6 +51,8 @@ const Formulario = () => {
                 placeholder="Uma breve descrição da tarefa..."
                 type="text"
                 obrigatorio
+                valor={descricao}
+                aoReceber={valor => setDescricao(valor)}
             />
             <CampoTexto
                 label="Opcional"
@@ -36,8 +60,10 @@ const Formulario = () => {
                 placeholder="Caso tenha um direcionamento"
                 type="text"
                 obrigatorio={false}
+                valor={opcional}
+                aoReceber={valor => setOpcional(valor)}
             />
-            <Botao textBotao="Salvar"/>
+            <Botao textBotao="Salvar" />
         </FormularioEstilizado>
     )
 }
